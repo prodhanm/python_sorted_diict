@@ -19,12 +19,10 @@ posts = {
 def get_likes(d):
     return d["likes"]
 
-def sort_content(posts):
+def main():
+    #sort_content(posts)
     for post in sorted(posts.values(), key=get_likes, reverse=True):
         print(post["content"])
-
-def main():
-    sort_content(posts)
 
 if __name__ == "__main__":
     main()
